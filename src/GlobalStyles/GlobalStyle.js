@@ -10,6 +10,12 @@ const GlobalStylesCss = createGlobalStyle`
     list-style: none;
     list-style-type: none;
 }
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
 
 `;
 
