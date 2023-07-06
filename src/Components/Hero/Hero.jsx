@@ -21,6 +21,9 @@ const HeroDiv = styled.div`
     height: 450px;
     width: 350px;
     border-radius: 8px;
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   }
 `;
 const WelcomeDiv = styled.div`
@@ -39,18 +42,20 @@ const SysApBtn = styled.button`
   color: white;
   border-radius: 5px;
   cursor: pointer;
-`
-
+`;
+const HeroSpan = styled.span`
+  width: 80%;
+  height: 3px;
+  background-color: black;
+`;
 
 const Hero = () => {
   return (
     <>
       <HeroDiv>
         <WelcomeDiv>
-          <h1>Welcome</h1>
-          <span>
-            ---------------------------------------------------------------
-          </span>
+          <h1>Welcome!</h1>
+          <HeroSpan></HeroSpan>
           <h2>Online Appointment Booking System </h2>
           <p>
             We recommend using the web system to schedule, check, and cancel
@@ -65,7 +70,7 @@ const Hero = () => {
       <h2>Trabajamos con grandes obras sociales:</h2>
 
       <HeroSlider />
-      <Specialities/>
+      <Specialities />
     </>
   );
 };
