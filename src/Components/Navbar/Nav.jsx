@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const NavDiv = styled.nav`
@@ -10,7 +11,9 @@ const NavDiv = styled.nav`
   height: 70px;
   background-color: #131415;
   color: white;
-`;
+  position: fixed;
+  top: 0;
+`
 
 const UlDiv = styled.ul`
   display: flex;
@@ -38,17 +41,27 @@ const UlDiv = styled.ul`
     }
   }
 `;
+const LinksStyle = styled(Link)`
+color: white;
+text-decoration: none;
+list-style: none;
+border: none;
+`
 
 const Nav = () => {
   return (
     <NavDiv>
       <UlDiv>
-        <li>Home</li>
+        <li>
+          <LinksStyle to="/">Home</LinksStyle>
+        </li>
         <li>About Us</li>
         <li>Appointments</li>
         <li>Contact</li>
         <li>Register</li>
-        <li>LogIn</li>
+        <li>
+          <LinksStyle to="/login">LogIn</LinksStyle>
+        </li>
       </UlDiv>
     </NavDiv>
   );
