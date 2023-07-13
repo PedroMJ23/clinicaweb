@@ -56,9 +56,9 @@ const Nav = () => {
           <LinksStyle to="/">Home</LinksStyle>
         </li>
         <li>About Us</li>
-        <li>Appointments</li>
+        <li><LinksStyle to="/appointments">Appointments</LinksStyle></li>
         <li>Contact</li>
-        <li>Register</li>
+        <li><LinksStyle to="/register">Register</LinksStyle></li>
         <li>
           <LinksStyle to="/login">LogIn</LinksStyle>
         </li>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const LogInContainer = styled.div`
+const RegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ const LogInContainer = styled.div`
   color: black;
 `;
 
-const LogInForm = styled.form`
+const RegisterForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -20,12 +20,12 @@ const LogInForm = styled.form`
   border-radius: 8px;
 `;
 
-const LogInInput = styled.input`
+const RegisterInput = styled.input`
   padding: 10px;
   border-radius: 4px;
 `;
 
-const LogInButton = styled.button`
+const RegisterButton = styled.button`
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -34,7 +34,7 @@ const LogInButton = styled.button`
   cursor: pointer;
 `;
 
-const LogIn = () => {
+const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -48,29 +48,29 @@ const LogIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //agregar la lógica para autenticar al usuario
+    // Agrega la lógica para registrar al usuario
   };
 
   return (
-    <LogInContainer>
-      <LogInForm onSubmit={handleSubmit}>
-        <h2>Log In</h2>
-        <LogInInput
+    <RegisterContainer>
+      <RegisterForm onSubmit={handleSubmit}>
+        <h2>Register</h2>
+        <RegisterInput
           type="text"
           placeholder="Username"
           value={username}
           onChange={handleUsernameChange}
         />
-        <LogInInput
+        <RegisterInput
           type="password"
           placeholder="Password"
           value={password}
           onChange={handlePasswordChange}
         />
-        <LogInButton type="submit">Log In</LogInButton>
-      </LogInForm>
-    </LogInContainer>
+        <RegisterButton type="submit">Register</RegisterButton>
+      </RegisterForm>
+    </RegisterContainer>
   );
 };
 
-export default LogIn;
+export default Register;
