@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import ClinicalImg from "../../assets/SliderImg/clinic.jpg";
 import HeroSlider from "../Slider/SliderWithSlick";
 import Specialities from "../Specialities/Specialities";
+import { Link } from "react-router-dom";
 
 const HeroDiv = styled.div`
   display: flex;
@@ -48,6 +49,12 @@ const HeroSpan = styled.span`
   height: 3px;
   background-color: black;
 `;
+const LinksStyle = styled(Link)`
+color: white;
+text-decoration: none;
+list-style: none;
+border: none;
+`
 
 const Hero = () => {
   return (
@@ -61,7 +68,7 @@ const Hero = () => {
             We recommend using the web system to schedule, check, and cancel
             appointments.
           </p>
-          <SysApBtn>System Appointment</SysApBtn>
+          <SysApBtn ><LinksStyle to="/appointments">System Appointment </LinksStyle> </SysApBtn>
         </WelcomeDiv>
         <div>
           <img src={ClinicalImg} alt="imagenDeClinica" />
